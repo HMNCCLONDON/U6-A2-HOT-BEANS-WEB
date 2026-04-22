@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial; }
+body { display:flex; height:100vh; }
+
+/* Sidebar */
+.sidebar {
+    width:260px;
+    background:#1b263b;
+    color:white;
+    padding:25px;
+}
+
+/* Logo */
+.logo {
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo img {
+    max-width:180px;
+    width:100%;
+    transition:0.3s;
+}
+
+.logo img:hover {
+    transform:scale(1.05);
+    opacity:0.9;
+}
+
+/* Menu */
+.menu a {
+    display:block;
+    color:#e0e1dd;
+    text-decoration:none;
+    margin:10px 0;
+    padding:6px;
+}
+.menu a:hover, .active { background:#415a77; }
+
+/* Main */
+.main { flex:1; display:flex; flex-direction:column; }
+
+.topbar {
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Background */
+.content {
+    flex:1;
+    background:url('building.png') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Overlay */
+.overlay {
+    background:rgba(13,27,42,0.92);
+    padding:40px;
+    border-radius:10px;
+    color:white;
+    width:350px;
+    text-align:center;
+}
+
+/* Form */
+.form h2 { margin-bottom:20px; }
+
+.form input, .form select {
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:none;
+    border-radius:5px;
+}
+
+.form button {
+    width:100%;
+    padding:10px;
+    background:black;
+    color:white;
+    border:none;
+    border-radius:5px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.form button:hover {
+    background:#415a77;
+}
+
+.form p { margin-top:10px; }
+
+.form a {
+    color:#a8dadc;
+    text-decoration:none;
+}
+
+/* Social */
+.social {
+    margin-top:20px;
+}
+
+.social a {
+    display:inline-block;
+    margin:0 10px;
+    transition:0.3s;
+}
+
+.social img {
+    width:35px;
+    height:35px;
+}
+
+.social a:hover {
+    transform:scale(1.2);
+}
+
+/* Footer */
+.footer {
+    background:#415a77;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Hot Beans Web Logo">
+        </a>
+    </div>
+
+    <div class="menu">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="job.html">JOB SPECIFICATION</a>
+        <a href="courses.html">COURSES</a>
+        <a href="registration.html" class="active">REGISTER</a>
+    </div>
+</div>
+
+<div class="main">
+    <div class="topbar">REGISTER</div>
+
+    <div class="content">
+        <div class="overlay">
+
+            <form class="form">
+                <h2>Create Account</h2>
+
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number">
+
+                <select>
+                    <option>Select Course Interest</option>
+                    <option>Web Development</option>
+                    <option>Python</option>
+                    <option>App Development</option>
+                </select>
+
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+
+                <button type="submit">Register</button>
+
+                <p>Already have an account? <a href="login.html">Sign In</a></p>
+            </form>
+
+            <div class="social">
+                <a href="https://www.facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png"></a>
+                <a href="https://www.tiktok.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">© Hot Beans Web</div>
+</div>
+
+</body>
+</html>

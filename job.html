@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Job Specification</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial; }
+
+body { display:flex; height:100vh; }
+
+/* Sidebar */
+.sidebar {
+    width:260px;
+    background:#1b263b;
+    color:white;
+    padding:25px;
+}
+
+/* Logo */
+.logo {
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.logo a {
+    display:inline-block;
+}
+
+.logo img {
+    width:100%;
+    max-width:180px;
+    height:auto;
+    display:block;
+    margin:0 auto;
+    transition:0.3s;
+}
+
+.logo img:hover {
+    transform:scale(1.05);
+    opacity:0.9;
+}
+
+/* Menu */
+.menu a {
+    display:block;
+    color:#e0e1dd;
+    text-decoration:none;
+    margin:10px 0;
+    padding:6px;
+}
+.menu a:hover, .active { background:#415a77; }
+
+/* Main */
+.main { flex:1; display:flex; flex-direction:column; }
+
+.topbar {
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Background */
+.content {
+    flex:1;
+    background:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+}
+
+/* Overlay */
+.overlay {
+    background:rgba(13,27,42,0.92);
+    padding:40px;
+    border-radius:10px;
+    color:white;
+    max-width:900px;
+    max-height:85vh;
+    overflow-y:auto;
+}
+
+/* Text */
+.overlay h2 {
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.overlay h3 {
+    margin-top:20px;
+    color:#a8dadc;
+}
+
+.overlay p, .overlay li {
+    line-height:1.6;
+}
+
+/* Job cards */
+.job-sites {
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.card {
+    background:white;
+    color:black;
+    width:30%;
+    min-width:200px;
+    border-radius:8px;
+    padding:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:scale(1.05);
+}
+
+.card img {
+    width:100%;
+    height:80px;
+    object-fit:contain;
+    margin-bottom:10px;
+}
+
+.card a {
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 12px;
+    background:black;
+    color:white;
+    text-decoration:none;
+    border-radius:4px;
+}
+
+.card a:hover {
+    background:#415a77;
+}
+
+/* Social icons */
+.social {
+    margin-top:25px;
+    text-align:center;
+}
+
+.social a {
+    display:inline-block;
+    margin:0 10px;
+    transition:0.3s;
+}
+
+.social img {
+    width:35px;
+    height:35px;
+}
+
+.social a:hover {
+    transform:scale(1.2);
+}
+
+/* Footer */
+.footer {
+    background:#415a77;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Hot Beans Web Logo">
+        </a>
+    </div>
+
+    <div class="menu">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="job.html" class="active">JOB SPECIFICATION</a>
+        <a href="courses.html">COURSES</a>
+        <a href="registration.html">REGISTER</a>
+    </div>
+</div>
+
+<div class="main">
+    <div class="topbar">JOB SPECIFICATION</div>
+
+    <div class="content">
+        <div class="overlay">
+
+            <h2>Web Developer</h2>
+
+            <p>
+                The key duty of the web developer is the creation of websites and online applications that perform well.
+                While some web developers concentrate their work on the "back end" of the website or online application
+                and databases used in it, other web developers work with both ends, which is called "full-stack".
+                Some web developers specialise in the user interface and visual design.
+            </p>
+
+            <h3>Major Duties</h3>
+            <ul>
+                <li>Websites testing and debugging</li>
+                <li>Making websites secure and optimised</li>
+                <li>Maintaining websites and ensuring that they function properly</li>
+                <li>Using programming languages such as HTML, CSS, and JavaScript to write code</li>
+                <li>Planning and creating prototypes of new applications</li>
+                <li>Creating and testing API (Application Programming Interface)</li>
+                <li>Staying updated about recent trends and innovations in web development</li>
+                <li>Database creation and management</li>
+                <li>Providing updates on project progress and collaborating with designers and developers</li>
+            </ul>
+
+            <h3>Working Hours and Working Environment</h3>
+            <p>
+                The job will involve working from Monday to Friday during regular office hours (approximately 8:30 a.m. to 5:00 p.m.),
+                but this is not set in stone. It may vary at times due to your employer’s convenience. Moreover, there may be options
+                for remote working from home, but in-person training sessions and meetings may be a requirement at times.
+            </p>
+
+            <h3>Education and Skills</h3>
+            <p>
+                There are no educational prerequisites required to pursue a career in web development in the United Kingdom.
+                Nonetheless, some employers tend to favor applicants who hold a degree in web design and development, software engineering,
+                informatics, or computer science. It is mainly the practical knowledge that employers look for in prospective candidates.
+                A degree in an appropriate field will assist you in developing your skills in application design and programming.
+            </p>
+
+            <h3>Find Jobs Online</h3>
+            <p>Explore more opportunities on these platforms:</p>
+
+            <div class="job-sites">
+
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Indeed_logo.svg">
+                    <h4>Indeed</h4>
+                    <a href="https://www.indeed.co.uk" target="_blank">Visit Site</a>
+                </div>
+
+                <div class="card">
+                    <img src="https://www.adzuna.co.uk/favicon.ico">
+                    <h4>Adzuna</h4>
+                    <a href="https://www.adzuna.co.uk" target="_blank">Visit Site</a>
+                </div>
+
+                <div class="card">
+                    <img src="https://www.reed.co.uk/favicon.ico">
+                    <h4>Reed</h4>
+                    <a href="https://www.reed.co.uk" target="_blank">Visit Site</a>
+                </div>
+
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                </a>
+
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="Twitter">
+                </a>
+
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
+                </a>
+
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                </a>
+
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+                </a>
+
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">© Hot Beans Web</div>
+</div>
+
+</body>
+</html>

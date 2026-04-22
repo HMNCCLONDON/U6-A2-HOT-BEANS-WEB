@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Courses</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial; }
+
+body { display:flex; height:100vh; }
+
+/* Sidebar */
+.sidebar {
+    width:260px;
+    background:#1b263b;
+    color:white;
+    padding:25px;
+}
+
+/* Logo (UPDATED FROM REGISTER PAGE) */
+.logo {
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo img {
+    max-width:180px;
+    width:100%;
+    transition:0.3s;
+}
+
+.logo img:hover {
+    transform:scale(1.05);
+    opacity:0.9;
+}
+
+/* Menu */
+.menu a {
+    display:block;
+    color:#e0e1dd;
+    text-decoration:none;
+    margin:10px 0;
+    padding:6px;
+}
+.menu a:hover, .active { background:#415a77; }
+
+/* Main */
+.main { flex:1; display:flex; flex-direction:column; }
+
+.topbar {
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Background */
+.content {
+    flex:1;
+    background:url('https://st5.depositphotos.com/1052205/77045/i/450/depositphotos_770454082-stock-photo-work-home-programmer-coding-code.jpg') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+}
+
+/* Overlay */
+.overlay {
+    background:rgba(13,27,42,0.92);
+    padding:40px;
+    border-radius:10px;
+    color:white;
+    max-width:1100px;
+    width:100%;
+}
+
+/* Title */
+.overlay h2 {
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.overlay p {
+    text-align:center;
+    margin-bottom:30px;
+    color:#a8dadc;
+}
+
+/* Courses Grid */
+.courses {
+    display:flex;
+    gap:20px;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* CLICKABLE LINK WRAPPER */
+.course-link {
+    text-decoration:none;
+    color:inherit;
+    display:block;
+    width:32%;
+    min-width:250px;
+}
+
+/* Course Card */
+.course-card {
+    background:#1b263b;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.course-card:hover {
+    transform:scale(1.05);
+}
+
+/* Image */
+.course-card img {
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+/* Content */
+.course-content {
+    padding:15px;
+}
+
+.course-content h3 {
+    margin-bottom:10px;
+}
+
+.course-content p {
+    font-size:14px;
+    text-align:left;
+    margin-bottom:15px;
+    color:#e0e1dd;
+}
+
+/* Social */
+.social {
+    margin-top:25px;
+    text-align:center;
+}
+
+.social a {
+    display:inline-block;
+    margin:0 10px;
+    transition:0.3s;
+}
+
+.social img {
+    width:35px;
+    height:35px;
+}
+
+.social a:hover {
+    transform:scale(1.2);
+}
+
+/* Footer */
+.footer {
+    background:#415a77;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <!-- UPDATED LOGO (CLICKABLE + REGISTER STYLE) -->
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Hot Beans Web Logo">
+        </a>
+    </div>
+
+    <div class="menu">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="job.html">JOB SPECIFICATION</a>
+        <a href="courses.html" class="active">COURSES</a>
+        <a href="registration.html">REGISTER</a>
+    </div>
+</div>
+
+<div class="main">
+    <div class="topbar">COURSES</div>
+
+    <div class="content">
+        <div class="overlay">
+
+            <h2>Courses</h2>
+            <p>Choose a course according to your needs.</p>
+
+            <div class="courses">
+
+                <a href="https://www.codecademy.com/catalog/subject/web-development" target="_blank" class="course-link">
+                    <div class="course-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiEjBilP-PBEbL7NAsVh5jU2PEYPgaGhh8-g&s">
+                        <div class="course-content">
+                            <h3>Web Development Course</h3>
+                            <p>Build modern, responsive websites from the ground up using HTML, CSS, and JavaScript.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://www.codecademy.com/catalog/language/python" target="_blank" class="course-link">
+                    <div class="course-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYbsJFulTRg3kb36fs2oHH0rDX5C0uJ6HBDQ&s">
+                        <div class="course-content">
+                            <h3>Python Coding Course</h3>
+                            <p>Master Python programming through real projects in automation and data analysis.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://www.codecademy.com/catalog/subject/mobile-development" target="_blank" class="course-link">
+                    <div class="course-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs2iDe9MCMV3wnWu8mHW2RByxe45bHKvqlkw&s">
+                        <div class="course-content">
+                            <h3>App Development Course</h3>
+                            <p>Create mobile apps with modern UI/UX design and deployment skills.</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="social">
+                <a href="https://www.facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png"></a>
+                <a href="https://www.tiktok.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">© Hot Beans Web</div>
+</div>
+
+</body>
+</html>
