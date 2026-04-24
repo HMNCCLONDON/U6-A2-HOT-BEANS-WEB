@@ -105,6 +105,13 @@ body { display:flex; height:100vh; }
     text-decoration:none;
 }
 
+/* Success message */
+.success {
+    margin-top:10px;
+    color:#90ee90;
+    display:none;
+}
+
 /* Social */
 .social {
     margin-top:20px;
@@ -166,8 +173,8 @@ body { display:flex; height:100vh; }
                 <input type="email" placeholder="Email Address" required>
                 <input type="tel" placeholder="Phone Number">
 
-                <select>
-                    <option>Select Course Interest</option>
+                <select required>
+                    <option value="">Select Course Interest</option>
                     <option>Web Development</option>
                     <option>Python</option>
                     <option>App Development</option>
@@ -177,6 +184,8 @@ body { display:flex; height:100vh; }
                 <input type="password" placeholder="Confirm Password" required>
 
                 <button type="submit">Register</button>
+
+                <p id="successMsg" class="success">Registration successful!</p>
 
                 <p>Already have an account? <a href="login.html">Sign In</a></p>
             </form>
@@ -195,6 +204,25 @@ body { display:flex; height:100vh; }
 
     <div class="footer">© Hot Beans Web</div>
 </div>
+
+<script>
+document.querySelector(".form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const passwords = document.querySelectorAll("input[type='password']");
+    const password = passwords[0].value;
+    const confirm = passwords[1].value;
+
+    if (password !== confirm) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    document.getElementById("successMsg").style.display = "block";
+
+    this.reset();
+});
+</script>
 
 </body>
 </html>
