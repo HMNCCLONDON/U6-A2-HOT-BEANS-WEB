@@ -1,13 +1,18 @@
+Here is the completely fixed and cleaned-up code for your **About Us** page.
+
+The structural duplication has been removed, the sizing issues have been resolved by adding proper overflow management to the `.main` section, and the detailed footer is seamlessly integrated into the page layout flow.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>About</title>
+<title>About Us</title>
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:Arial; }
 
-body { display:flex; height:100vh; }
+body { display:flex; height:100vh; overflow:hidden; }
 
 /* Sidebar */
 .sidebar {
@@ -15,6 +20,7 @@ body { display:flex; height:100vh; }
     background:#1b263b;
     color:white;
     padding:25px;
+    flex-shrink:0;
 }
 
 /* Logo */
@@ -51,14 +57,21 @@ body { display:flex; height:100vh; }
 }
 .menu a:hover, .active { background:#415a77; }
 
-/* Main */
-.main { flex:1; display:flex; flex-direction:column; }
+/* Main Section Layout Sizing Fix */
+.main { 
+    flex:1; 
+    display:flex; 
+    flex-direction:column; 
+    overflow-y:auto; 
+    height:100vh;
+}
 
 .topbar {
     background:#0d1b2a;
     color:white;
     text-align:center;
     padding:20px;
+    flex-shrink:0;
 }
 
 /* Background */
@@ -76,7 +89,7 @@ body { display:flex; height:100vh; }
     color:white;
 }
 
-/* Team */
+/* Team Section */
 .team {
     display:flex;
     justify-content:center;
@@ -114,11 +127,13 @@ body { display:flex; height:100vh; }
 .card .desc {
     margin:10px;
     font-size:12px;
+    line-height:1.4;
 }
 
 .card .email {
     margin:0 10px;
     font-size:12px;
+    font-weight:bold;
 }
 
 .card button {
@@ -128,13 +143,14 @@ body { display:flex; height:100vh; }
     color:white;
     border:none;
     cursor:pointer;
+    margin-top:auto; /* Pushes button to bottom of card uniformly */
 }
 
 .card button:hover {
     background:#333;
 }
 
-/* ✅ Social icons */
+/* Page Body Social Icons */
 .social {
     margin-top:30px;
     display:flex;
@@ -152,12 +168,76 @@ body { display:flex; height:100vh; }
     opacity:0.8;
 }
 
-/* Footer */
+/* Integrated Footer Unified Styling */
 .footer {
-    background:#415a77;
+    background:#1b263b;
     color:white;
     text-align:center;
-    padding:10px;
+    flex-shrink:0;
+}
+
+.footer-container {
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    padding:30px 20px;
+    gap:30px;
+}
+
+.footer-section {
+    text-align:left;
+    max-width:250px;
+}
+
+.footer-logo {
+    width:120px;
+    margin-bottom:10px;
+}
+
+.footer-section h3 {
+    margin-bottom:15px;
+    font-size:18px;
+    color:#a8dadc;
+}
+
+.footer-section p {
+    line-height:1.5;
+    color:#e0e1dd;
+}
+
+.footer-section a {
+    display:block;
+    color:#e0e1dd;
+    text-decoration:none;
+    margin:8px 0;
+}
+
+.footer-section a:hover {
+    color:white;
+    text-decoration:underline;
+}
+
+.footer-social {
+    display:flex;
+    justify-content:flex-start;
+    gap:12px;
+    margin-top:10px;
+}
+
+.footer-social img {
+    width:28px;
+    transition:0.3s;
+}
+
+.footer-social img:hover {
+    transform:scale(1.15);
+}
+
+.footer-bottom {
+    background:#0d1b2a;
+    padding:15px;
+    font-size:14px;
+    border-top:1px solid rgba(255,255,255,0.1);
 }
 </style>
 </head>
@@ -190,7 +270,7 @@ body { display:flex; height:100vh; }
             <div class="team">
 
                 <div class="card">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Carter">
                     <h4>James Carter</h4>
                     <p class="role">CEO & Founder</p>
                     <p class="desc">
@@ -202,7 +282,7 @@ body { display:flex; height:100vh; }
                 </div>
 
                 <div class="card">
-                    <img src="https://randomuser.me/api/portraits/men/45.jpg">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Stone">
                     <h4>Michael Stone</h4>
                     <p class="role">Web Developer</p>
                     <p class="desc">
@@ -214,7 +294,7 @@ body { display:flex; height:100vh; }
                 </div>
 
                 <div class="card">
-                    <img src="https://randomuser.me/api/portraits/men/12.jpg">
+                    <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Daniel Reed">
                     <h4>Daniel Reed</h4>
                     <p class="role">UI Designer</p>
                     <p class="desc">
@@ -227,7 +307,6 @@ body { display:flex; height:100vh; }
 
             </div>
 
-            <!-- ✅ Added text + social icons -->
             <p style="text-align:center; margin-top:20px;">
                 Whether you're looking for a professional website or starting your
                 journey in web development, Hot Beans Web is here to help you succeed.
@@ -235,35 +314,29 @@ body { display:flex; height:100vh; }
 
             <div class="social">
                 <a href="https://www.facebook.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
                 </a>
                 <a href="https://www.twitter.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="Twitter">
                 </a>
                 <a href="https://www.linkedin.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
                 </a>
                 <a href="https://www.instagram.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
                 </a>
                 <a href="https://www.tiktok.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
                 </a>
                 <a href="https://www.youtube.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
                 </a>
             </div>
 
         </div>
     </div>
 
-    <div class="footer">© Hot Beans Web</div>
-</div>
-
-</body>
-</html>
-
-    <!-- New Footer -->
+    <!-- Correctly Integrated Footer Section inside the Main Flow -->
     <div class="footer">
 
         <div class="footer-container">
@@ -290,31 +363,24 @@ body { display:flex; height:100vh; }
                 <h3>Follow Us</h3>
 
                 <div class="footer-social">
-
                     <a href="https://www.facebook.com" target="_blank">
                         <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
                     </a>
-
                     <a href="https://www.twitter.com" target="_blank">
                         <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="Twitter">
                     </a>
-
                     <a href="https://www.linkedin.com" target="_blank">
                         <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
                     </a>
-
                     <a href="https://www.instagram.com" target="_blank">
                         <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
                     </a>
-
                     <a href="https://www.tiktok.com" target="_blank">
                         <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
                     </a>
-
                     <a href="https://www.youtube.com" target="_blank">
                         <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
                     </a>
-
                 </div>
 
             </div>
@@ -331,3 +397,5 @@ body { display:flex; height:100vh; }
 
 </body>
 </html>
+
+```
